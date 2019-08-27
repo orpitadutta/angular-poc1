@@ -1,0 +1,14 @@
+.center {
+    text-align: center;
+    margin: 20px;
+    font-size: large;
+  }
+  
+th {
+    background-color: #e7f3ff;
+    color: gray;
+} 
+
+.tbl-margin {
+  margin: 10px;
+}

@@ -1,0 +1,72 @@
+<div class="center">
+    <p><b>Demo Table</b></p>
+</div>
+<div class="tbl-margin">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of userList; index as i">
+          <td scope="row">{{ i + 1 }}</td>
+          <td>
+            {{ user.name }}
+          </td>
+          <td>{{ user.age | number }}</td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+<div class="center">
+    <p><b>Toggle using ngIf-Else in Ng Template</b></p>
+    <div>
+        <button class="btn btn-primary" 
+                (click)="toggle($event)">Toggle Button</button>
+    </div>
+    <div>
+            <ng-template
+            *ngIf="show;then showBlock; else notShowBlock">
+            </ng-template>
+
+            <ng-template #showBlock>
+            <p>
+                Appears when true. Part of NgIf.
+            </p>
+            </ng-template>
+
+            <ng-template #notShowBlock>
+            <p>
+                    Appears when false. Part of Else.
+            </p>
+            </ng-template>
+        </div>
+</div>
+<!-- <div class="container">
+      <div class="row row-no-gutters">
+        <div class="col-xs-2">
+            <button class="btn btn-primary" 
+                  (click)="toggle()">Toggle Button</button>
+        </div>
+        <div class="col-xs-10">
+            <ng-template
+            *ngIf="show;then showBlock; else notShowBlock">
+            </ng-template>
+
+            <ng-template #showBlock>
+            <p>
+                Show this only if "show" is true
+            </p>
+            </ng-template>
+
+            <ng-template #notShowBlock>
+            <p>
+                Show this only if "show" is not true
+            </p>
+            </ng-template>
+        </div>
+      </div>
+</div> -->
