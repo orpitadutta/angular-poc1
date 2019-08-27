@@ -22,13 +22,5 @@ export class UserComponent implements OnInit {
 
   toggle(el) {
     this.show = !this.show;
-    if(this.show){
-      el.target.classList.remove("btn-danger");
-      el.target.classList.add("btn-primary");
-    }
-    else{
-      el.target.classList.remove("btn-primary");
-      el.target.classList.add("btn-danger");
-    }
   }
 }

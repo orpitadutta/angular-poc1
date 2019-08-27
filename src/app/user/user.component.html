@@ -21,52 +21,24 @@
         </tbody>
       </table>
 </div>
+<div>
+</div>
 <div class="center">
     <p><b>Toggle using ngIf-Else in Ng Template</b></p>
-    <div>
-        <button class="btn btn-primary" 
-                (click)="toggle($event)">Toggle Button</button>
-    </div>
-    <div>
-            <ng-template
-            *ngIf="show;then showBlock; else notShowBlock">
-            </ng-template>
+        <b>Toggle the switch to change text below : </b><input type="checkbox" id="switch" (change)="toggle()" [checked]="show"/><label for="switch">Toggle</label>
+        <ng-template
+        *ngIf="show;then showBlock; else notShowBlock">
+        </ng-template>
 
-            <ng-template #showBlock>
-            <p>
-                Appears when true. Part of NgIf.
-            </p>
-            </ng-template>
+        <ng-template #showBlock>
+        <p>
+            Appears when true. Part of NgIf.
+        </p>
+        </ng-template>
 
-            <ng-template #notShowBlock>
-            <p>
-                    Appears when false. Part of Else.
-            </p>
-            </ng-template>
-        </div>
+        <ng-template #notShowBlock>
+        <p>
+                Appears when false. Part of Else.
+        </p>
+        </ng-template>
 </div>
-<!-- <div class="container">
-      <div class="row row-no-gutters">
-        <div class="col-xs-2">
-            <button class="btn btn-primary" 
-                  (click)="toggle()">Toggle Button</button>
-        </div>
-        <div class="col-xs-10">
-            <ng-template
-            *ngIf="show;then showBlock; else notShowBlock">
-            </ng-template>
-
-            <ng-template #showBlock>
-            <p>
-                Show this only if "show" is true
-            </p>
-            </ng-template>
-
-            <ng-template #notShowBlock>
-            <p>
-                Show this only if "show" is not true
-            </p>
-            </ng-template>
-        </div>
-      </div>
-</div> -->
